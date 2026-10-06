@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>caroeisele.tech</title>
+<meta name="description" content="Portfolio of Caro Eisele. Deploying soon.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐆</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root { --paper: #FFFFFF; --ink: #141414; --muted: #545454; --accent: #A3221B; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 15px;
+  line-height: 1.55;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; }
+.leo { display: block; width: 100%; height: 14px; }
+.classification { margin: 8px 0 0; text-align: center; color: var(--accent); font-weight: 800; font-size: 12px; letter-spacing: 0.14em; }
+header { padding: 32px 0 20px; border-bottom: 2px solid var(--ink); }
+h1 { margin: 0; font-size: clamp(30px, 8.5vw, 60px); line-height: 1.05; font-weight: 800; letter-spacing: -0.03em; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; word-break: break-all; }
+h1 .cursor { display: inline-block; width: 0.42em; height: 0.8em; background: var(--accent); }
+.status { margin: 14px 0 0; display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 2px 12px; font-size: 14px; }
+.status dt { font-weight: 800; }
+.status dd { margin: 0; }
+section { margin-top: 28px; }
+h2 { margin: 0 0 10px; font-size: 14px; font-weight: 800; letter-spacing: 0.1em; }
+h2 span { color: var(--accent); }
+.frame { border: 2px solid var(--ink); }
+.frame-head { background: var(--ink); color: var(--paper); display: flex; justify-content: space-between; gap: 12px; padding: 6px 12px; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; }
+.video { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.video iframe, .video > div { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.frame-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 12px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+button { min-height: 44px; padding: 8px 16px; font: inherit; font-weight: 700; color: var(--paper); background: var(--ink); border: 2px solid var(--ink); border-radius: 0; cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+ol { margin: 0; padding-left: 0; list-style: none; counter-reset: step; }
+ol li { counter-increment: step; display: grid; grid-template-columns: 40px minmax(0, 1fr); padding: 8px 0; border-top: 1px solid var(--ink); }
+ol li:last-child { border-bottom: 1px solid var(--ink); }
+ol li::before { content: counter(step, decimal-leading-zero); font-weight: 800; color: var(--accent); }
+.redacted { background: var(--ink); color: var(--ink); }
+footer { margin-top: 36px; font-size: 13px; color: var(--muted); }
+footer .classification { margin-top: 18px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" aria-hidden="true" style="position: absolute">
+  <defs>
+    <pattern id="leo" width="46" height="14" patternUnits="userSpaceOnUse">
+      <rect width="46" height="14" fill="#D1A15F"></rect>
+      <ellipse cx="10" cy="7" rx="2.6" ry="2" fill="#AF7B3C"></ellipse>
+      <ellipse cx="6.6" cy="5.2" rx="2.2" ry="1.2" transform="rotate(-35 6.6 5.2)" fill="#2B1B10"></ellipse>
+      <ellipse cx="11" cy="3" rx="1.9" ry="1.1" transform="rotate(12 11 3)" fill="#2B1B10"></ellipse>
+      <ellipse cx="13.8" cy="7.4" rx="1.2" ry="2" transform="rotate(14 13.8 7.4)" fill="#2B1B10"></ellipse>
+      <ellipse cx="9.2" cy="11" rx="2.2" ry="1.1" transform="rotate(-8 9.2 11)" fill="#2B1B10"></ellipse>
+      <ellipse cx="32" cy="7.5" rx="2.4" ry="1.9" fill="#AF7B3C"></ellipse>
+      <ellipse cx="28.8" cy="9" rx="1.2" ry="2" transform="rotate(20 28.8 9)" fill="#2B1B10"></ellipse>
+      <ellipse cx="31" cy="3.6" rx="2.1" ry="1.1" transform="rotate(-15 31 3.6)" fill="#2B1B10"></ellipse>
+      <ellipse cx="35.4" cy="6.2" rx="1.1" ry="1.9" transform="rotate(-20 35.4 6.2)" fill="#2B1B10"></ellipse>
+      <ellipse cx="33.4" cy="11.3" rx="1.9" ry="1" transform="rotate(10 33.4 11.3)" fill="#2B1B10"></ellipse>
+      <circle cx="21" cy="3" r="1.1" fill="#2B1B10"></circle>
+      <circle cx="22.5" cy="11.5" r="0.9" fill="#2B1B10"></circle>
+      <circle cx="42" cy="2.5" r="1" fill="#2B1B10"></circle>
+      <circle cx="43" cy="11" r="1.2" fill="#2B1B10"></circle>
+    </pattern>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <svg class="leo" aria-hidden="true"><rect width="100%" height="14" fill="url(#leo)"></rect></svg>
+  <p class="classification">CLASSIFICATION: LEOPARD // PUBLIC (FOR NOW)</p>
+
+  <header>
+    <h1>caroeisele.tech<span class="cursor" aria-hidden="true"></span></h1>
+    <dl class="status">
+      <dt>OWNER</dt><dd>Caro Eisele</dd>
+      <dt>STATUS</dt><dd>Pre-Seed. Portfolio deploying soon.</dd>
+      <dt>INTERIM</dt><dd>One cat, selected at random.</dd>
+    </dl>
+  </header>
+
+  <main>
+    <section aria-labelledby="interim">
+      <h2 id="interim"><span>§1</span> INTERIM CONTENT</h2>
+      <div class="frame">
+        <div class="frame-head"><span>FEED / CATS</span><span id="feed-index">LOADING</span></div>
+        <div class="video"><div id="cat"></div></div>
+        <div class="frame-foot">
+          <span>Relevance to portfolio: under review.</span>
+          <button type="button" id="next">Next cat</button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="handover">
+      <h2 id="handover"><span>§2</span> HANDOVER PROCEDURE</h2>
+      <ol>
+        <li><span>Create a Namecheap account.</span></li>
+        <li><span>Send your Namecheap username to the issuer. The domain is pushed to your account.</span></li>
+        <li><span>Accept the GitHub repository transfer for this site.</span></li>
+        <li><span>Replace this page with your portfolio. The cat may stay.</span></li>
+        <li><span>The domain runs until October 2027. Renewal is at the owner's discretion and the owner's expense.</span></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    Issued by <span class="redacted">xxxxxxxxxxxx</span>, Office of Developer Experience.
+    <p class="classification">CLASSIFICATION: LEOPARD // PUBLIC (FOR NOW)</p>
+    <svg class="leo" aria-hidden="true" style="margin-top: 8px"><rect width="100%" height="14" fill="url(#leo)"></rect></svg>
+  </footer>
+</div>
+
+<script>
+// Cat videos (YouTube IDs). Add or swap IDs here; unavailable ones are skipped automatically.
+var CATS = ['J---aiyznGQ', 'QH2-TGUlwu4', '0Bmhjf0rKe8'];
+
+var queue = CATS.slice();
+for (var i = queue.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = queue[i]; queue[i] = queue[j]; queue[j] = t; }
+var player = null;
+var shown = 1;
+var feedIndex = document.getElementById('feed-index');
+function label() { feedIndex.textContent = 'CAT ' + String(shown).padStart(2, '0'); }
+
+function advance() {
+  queue.push(queue.shift());
+  shown++;
+  label();
+  if (player && player.loadVideoById) player.loadVideoById(queue[0]);
+  else fallback();
+}
+
+window.onYouTubeIframeAPIReady = function () {
+  if (!document.getElementById('cat')) return;
+  player = new YT.Player('cat', {
+    host: 'https://www.youtube-nocookie.com',
+    videoId: queue[0],
+    playerVars: { autoplay: 1, mute: 1, playsinline: 1, rel: 0 },
+    events: { onError: advance }
+  });
+  label();
+};
+
+function fallback() {
+  var box = document.querySelector('.video');
+  box.innerHTML = '<iframe title="Cat video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen src="https://www.youtube-nocookie.com/embed/' + queue[0] + '?autoplay=1&mute=1&playsinline=1&rel=0"></iframe>';
+  label();
+}
+
+document.getElementById('next').addEventListener('click', advance);
+
+var api = document.createElement('script');
+api.src = 'https://www.youtube.com/iframe_api';
+api.onerror = fallback;
+document.head.appendChild(api);
+setTimeout(function () { if (!player) fallback(); }, 5000);
+</script>
+</body>
+</html>
